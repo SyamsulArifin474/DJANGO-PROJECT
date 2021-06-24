@@ -1,0 +1,51 @@
+{% extends 'sikud/base.html' %}
+{% load static %}
+
+{% block contentt %}
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- /.col-md-6 -->
+      <div class="col-12">
+        <div class="card border-success card-primary card-outline">
+          <div class="card-header card-green">
+            <h2 class="m-0">Form Pendapatan</h2>
+          </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laboriosam, harum. A
+              necessitatibus, omnis
+              tempore molestiae deserunt vitae dolorem tempora possimus esse explicabo accusamus eum,
+              incidunt earum
+              magni doloribus modi. Alias.</p>
+          </div>
+          <div class="card-footer card-green card-outline">
+            <a href="#" class="btn btn-primary">Simpan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+{% endblock %}
+
+{% block breadcrumeb %}
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0"></h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item"><a href="/Dashboard">Dashboard</a></li>
+          <li class="breadcrumb-item"><a href="#">Data Pokok</a></li>
+          <li class="breadcrumb-item active">{{ bc_title }}</li>
+          <!-- <li class="breadcrumb-item"><a href="/Formulir">Formulir</a></li>
+                <li class="breadcrumb-item active">Form Formulir</li> -->
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+{% endblock breadcrumeb %}
