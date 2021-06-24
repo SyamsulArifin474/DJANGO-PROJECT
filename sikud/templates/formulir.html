@@ -1,0 +1,579 @@
+{% extends 'sikud/base.html' %}
+{% load static %}
+
+{% block contentt %}
+<div class="content">
+  <div class="container-fluid">
+    <div class="row">
+      <!-- /.col-md-6 -->
+      <div class="col-12">
+        <div class="card border-success card-primary card-outline">
+          <div class="card-header card-green">
+            <h2 class="m-0">Formulir</h2>
+          </div>
+          <div class="card-body">
+            <form autocomplete="off">
+              <div class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Kewarganegaraan *</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check form-check-inline"><input name="warganegara" type="radio" id="wni"
+                        value="WNI" class="form-check-input" aria-required="true" aria-invalid="false"><label for="wni"
+                        class="form-check-label">WNI</label></div>
+                    <div class="form-check form-check-inline"><input name="warganegara" type="radio" id="wna"
+                        value="WNA" class="form-check-input" aria-required="true" aria-invalid="false"><label for="wna"
+                        class="form-check-label">WNA</label></div>
+                    <div class="invalid-feedback" style="display: none;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group ">
+                <div class="row">
+                  <legend for="no_passport" class="col-sm-2 col-form-label">Nomor Passport *</legend>
+                  <div class="col-sm-10">
+                    <div class="form-row align-items-center">
+                      <div class="col-md-3"><input name="No Passport" type="text" id="no_passport"
+                          placeholder="Nomor Passport" class="form-control form-control-sm" aria-required="true"
+                          aria-invalid="false">
+                        <div class="invalid-feedback" style="display: none;"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="nokk" class="col-sm-2 col-form-label">Nomor KK *</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-3"><input name="No.KK" type="text" id="nokk" placeholder="Nomor Kartu Keluarga"
+                        class="form-control form-control-sm" aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="nik" class="col-sm-2 col-form-label">NIK *</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-stretch">
+                    <div class="col-md-3"><input name="NIK" type="text" id="nik" placeholder="Nomor Induk Kependudukan"
+                        class="form-control form-control-sm" aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                    <div>
+                      <!---->
+                      <!---->
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="nama_lengkap" class="col-sm-2 col-form-label">Nama Lengkap
+                  *</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-6"><input name="nama" type="text" id="nama_lengkap" placeholder="Nama Lengkap"
+                        class="form-control form-control-sm" aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Jenis Kelamin *</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check form-check-inline"><input readonly="readonly" name="jenis kelamin"
+                        type="radio" id="perempuan" value="P" class="form-check-input" aria-required="true"
+                        aria-invalid="false"><label for="perempuan" class="form-check-label"> Perempuan </label></div>
+                    <div class="form-check form-check-inline"><input readonly="readonly" name="jenis kelamin"
+                        type="radio" id="laki-laki" value="L" class="form-check-input" aria-required="true"
+                        aria-invalid="false"><label jenis="" for="laki-laki" class="form-check-label"> Laki-Laki
+                      </label></div>
+                    <div class="invalid-feedback" style="display: none;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="tempat_lahir" class="col-sm-2 col-form-label">Tempat Lahir</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input type="text" id="tempat_lahir" placeholder="Tempat Lahir"
+                        class="form-control form-control-sm"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="tanggal_lahir" class="col-sm-2 col-form-label">
+                  Tanggal Lahir *
+                </legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto">
+                      <div data-v-98191298="" name="tanggal lahir" type="date" id="tanggal_lahir"
+                        class="form-control form-control-sm" style="padding: 0px;">
+                        <select data-v-98191298="" style="padding: 4px 8px; color: rgb(73, 80, 87);">
+                          <option data-v-98191298="" value="0000">Tahun</option>
+                          <option data-v-98191298="" value="1921">1921</option>
+                          <option data-v-98191298="" value="1922">1922</option>
+                          <option data-v-98191298="" value="1923">1923</option>
+                          <option data-v-98191298="" value="1924">1924</option>
+                          <option data-v-98191298="" value="1925">1925</option>
+                          <option data-v-98191298="" value="1926">1926</option>
+                          <option data-v-98191298="" value="1927">1927</option>
+                          <option data-v-98191298="" value="1928">1928</option>
+                          <option data-v-98191298="" value="1929">1929</option>
+                          <option data-v-98191298="" value="1930">1930</option>
+                          <option data-v-98191298="" value="1931">1931</option>
+                          <option data-v-98191298="" value="1932">1932</option>
+                          <option data-v-98191298="" value="1933">1933</option>
+                          <option data-v-98191298="" value="1934">1934</option>
+                          <option data-v-98191298="" value="1935">1935</option>
+                          <option data-v-98191298="" value="1936">1936</option>
+                          <option data-v-98191298="" value="1937">1937</option>
+                          <option data-v-98191298="" value="1938">1938</option>
+                          <option data-v-98191298="" value="1939">1939</option>
+                          <option data-v-98191298="" value="1940">1940</option>
+                          <option data-v-98191298="" value="1941">1941</option>
+                          <option data-v-98191298="" value="1942">1942</option>
+                          <option data-v-98191298="" value="1943">1943</option>
+                          <option data-v-98191298="" value="1944">1944</option>
+                          <option data-v-98191298="" value="1945">1945</option>
+                          <option data-v-98191298="" value="1946">1946</option>
+                          <option data-v-98191298="" value="1947">1947</option>
+                          <option data-v-98191298="" value="1948">1948</option>
+                          <option data-v-98191298="" value="1949">1949</option>
+                          <option data-v-98191298="" value="1950">1950</option>
+                          <option data-v-98191298="" value="1951">1951</option>
+                          <option data-v-98191298="" value="1952">1952</option>
+                          <option data-v-98191298="" value="1953">1953</option>
+                          <option data-v-98191298="" value="1954">1954</option>
+                          <option data-v-98191298="" value="1955">1955</option>
+                          <option data-v-98191298="" value="1956">1956</option>
+                          <option data-v-98191298="" value="1957">1957</option>
+                          <option data-v-98191298="" value="1958">1958</option>
+                          <option data-v-98191298="" value="1959">1959</option>
+                          <option data-v-98191298="" value="1960">1960</option>
+                          <option data-v-98191298="" value="1961">1961</option>
+                          <option data-v-98191298="" value="1962">1962</option>
+                          <option data-v-98191298="" value="1963">1963</option>
+                          <option data-v-98191298="" value="1964">1964</option>
+                          <option data-v-98191298="" value="1965">1965</option>
+                          <option data-v-98191298="" value="1966">1966</option>
+                          <option data-v-98191298="" value="1967">1967</option>
+                          <option data-v-98191298="" value="1968">1968</option>
+                          <option data-v-98191298="" value="1969">1969</option>
+                          <option data-v-98191298="" value="1970">1970</option>
+                          <option data-v-98191298="" value="1971">1971</option>
+                          <option data-v-98191298="" value="1972">1972</option>
+                          <option data-v-98191298="" value="1973">1973</option>
+                          <option data-v-98191298="" value="1974">1974</option>
+                          <option data-v-98191298="" value="1975">1975</option>
+                          <option data-v-98191298="" value="1976">1976</option>
+                          <option data-v-98191298="" value="1977">1977</option>
+                          <option data-v-98191298="" value="1978">1978</option>
+                          <option data-v-98191298="" value="1979">1979</option>
+                          <option data-v-98191298="" value="1980">1980</option>
+                          <option data-v-98191298="" value="1981">1981</option>
+                          <option data-v-98191298="" value="1982">1982</option>
+                          <option data-v-98191298="" value="1983">1983</option>
+                          <option data-v-98191298="" value="1984">1984</option>
+                          <option data-v-98191298="" value="1985">1985</option>
+                          <option data-v-98191298="" value="1986">1986</option>
+                          <option data-v-98191298="" value="1987">1987</option>
+                          <option data-v-98191298="" value="1988">1988</option>
+                          <option data-v-98191298="" value="1989">1989</option>
+                          <option data-v-98191298="" value="1990">1990</option>
+                          <option data-v-98191298="" value="1991">1991</option>
+                          <option data-v-98191298="" value="1992">1992</option>
+                          <option data-v-98191298="" value="1993">1993</option>
+                          <option data-v-98191298="" value="1994">1994</option>
+                          <option data-v-98191298="" value="1995">1995</option>
+                          <option data-v-98191298="" value="1996">1996</option>
+                          <option data-v-98191298="" value="1997">1997</option>
+                          <option data-v-98191298="" value="1998">1998</option>
+                          <option data-v-98191298="" value="1999">1999</option>
+                          <option data-v-98191298="" value="2000">2000</option>
+                          <option data-v-98191298="" value="2001">2001</option>
+                          <option data-v-98191298="" value="2002">2002</option>
+                          <option data-v-98191298="" value="2003">2003</option>
+                          <option data-v-98191298="" value="2004">2004</option>
+                          <option data-v-98191298="" value="2005">2005</option>
+                          <option data-v-98191298="" value="2006">2006</option>
+                          <option data-v-98191298="" value="2007">2007</option>
+                          <option data-v-98191298="" value="2008">2008</option>
+                          <option data-v-98191298="" value="2009">2009</option>
+                          <option data-v-98191298="" value="2010">2010</option>
+                          <option data-v-98191298="" value="2011">2011</option>
+                          <option data-v-98191298="" value="2012">2012</option>
+                          <option data-v-98191298="" value="2013">2013</option>
+                          <option data-v-98191298="" value="2014">2014</option>
+                          <option data-v-98191298="" value="2015">2015</option>
+                          <option data-v-98191298="" value="2016">2016</option>
+                          <option data-v-98191298="" value="2017">2017</option>
+                          <option data-v-98191298="" value="2018">2018</option>
+                          <option data-v-98191298="" value="2019">2019</option>
+                          <option data-v-98191298="" value="2020">2020</option>
+                        </select><select data-v-98191298="" style="padding: 4px 8px; color: rgb(73, 80, 87);">
+                          <option data-v-98191298="" value="00">Bulan</option>
+                          <option data-v-98191298="" value="01">Januari</option>
+                          <option data-v-98191298="" value="02">Februari</option>
+                          <option data-v-98191298="" value="03">Maret</option>
+                          <option data-v-98191298="" value="04">April</option>
+                          <option data-v-98191298="" value="05">Mei</option>
+                          <option data-v-98191298="" value="06">Juni</option>
+                          <option data-v-98191298="" value="07">Juli</option>
+                          <option data-v-98191298="" value="08">Agustus</option>
+                          <option data-v-98191298="" value="09">September</option>
+                          <option data-v-98191298="" value="10">Oktober</option>
+                          <option data-v-98191298="" value="11">November</option>
+                          <option data-v-98191298="" value="12">Desember</option>
+                        </select><select data-v-98191298="" style="padding: 4px 8px; color: rgb(73, 80, 87);">
+                          <option data-v-98191298="" value="00">Tanggal</option>
+                          <option data-v-98191298="" value="01">01</option>
+                          <option data-v-98191298="" value="02">02</option>
+                          <option data-v-98191298="" value="03">03</option>
+                          <option data-v-98191298="" value="04">04</option>
+                          <option data-v-98191298="" value="05">05</option>
+                          <option data-v-98191298="" value="06">06</option>
+                          <option data-v-98191298="" value="07">07</option>
+                          <option data-v-98191298="" value="08">08</option>
+                          <option data-v-98191298="" value="09">09</option>
+                          <option data-v-98191298="" value="10">10</option>
+                          <option data-v-98191298="" value="11">11</option>
+                          <option data-v-98191298="" value="12">12</option>
+                          <option data-v-98191298="" value="13">13</option>
+                          <option data-v-98191298="" value="14">14</option>
+                          <option data-v-98191298="" value="15">15</option>
+                          <option data-v-98191298="" value="16">16</option>
+                          <option data-v-98191298="" value="17">17</option>
+                          <option data-v-98191298="" value="18">18</option>
+                          <option data-v-98191298="" value="19">19</option>
+                          <option data-v-98191298="" value="20">20</option>
+                          <option data-v-98191298="" value="21">21</option>
+                          <option data-v-98191298="" value="22">22</option>
+                          <option data-v-98191298="" value="23">23</option>
+                          <option data-v-98191298="" value="24">24</option>
+                          <option data-v-98191298="" value="25">25</option>
+                          <option data-v-98191298="" value="26">26</option>
+                          <option data-v-98191298="" value="27">27</option>
+                          <option data-v-98191298="" value="28">28</option>
+                          <option data-v-98191298="" value="29">29</option>
+                          <option data-v-98191298="" value="30">30</option>
+                          <option data-v-98191298="" value="31">31</option>
+                        </select>
+                      </div>
+                      <!---->
+                    </div>
+                    <!---->
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="anak_ke" class="col-sm-2 col-form-label">Anak Ke *</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-1"><label for="anak_ke" class="sr-only">Anak ke</label><input name="anak ke"
+                        type="number" id="anak_ke" min="0" class="form-control form-control-sm mb-2"
+                        aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                    <div class="col-auto">
+                      <div class="mb-2"><label for="jum_saudara" class="form-check-label"> Dari </label></div>
+                    </div>
+                    <div class="col-md-1"><label for="jum_saudara" class="sr-only">Jumlah Saudara</label><input
+                        name="jumlah saudara" type="number" id="jum_saudara" min="0"
+                        class="form-control form-control-sm mb-2" aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group row">
+                <legend for="tinggal_bersama" class="col-sm-2 col-form-label">Tinggal
+                  Bersama</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input type="text" id="tinggal_bersama" placeholder="Tinggal Bersama"
+                        class="form-control form-control-sm"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="jenjang_pendidikan" class="col-sm-2 col-form-label">Jenjang
+                  Pendidikan
+                  Terakhir</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><select name="Jenjang Pendidikan" id="jenjang_pendidikan"
+                        class="form-control form-control-sm" aria-required="false" aria-invalid="false">
+                        <option value="">Pilih Jenjang Pendidikan</option>
+                        <option value="1">Setingkat SD</option>
+                        <option value="2">Setingkat SMP</option>
+                        <option value="3">Setingkat SMA</option>
+                        <option value="4">D1</option>
+                        <option value="5">D2</option>
+                        <option value="6">D3</option>
+                        <option value="7">S1</option>
+                        <option value="8">S2</option>
+                        <option value="9">S3</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <legend for="pendidikan_terakhir" class="col-sm-2 col-form-label">Nama
+                  Pendidikan
+                  Terakhir</legend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input type="text" id="pendidikan_terakhir"
+                        placeholder="Nama Pendidikan/Sekolah Terakhir" class="form-control form-control-sm"></div>
+                  </div>
+                </div>
+              </div><small class="text-danger"><strong>Untuk nomor telpon milik orang tua/wali jangan diinputkan pada
+                  data peserta didik!</strong><br>Karena manajemen nomor telpon Pedatren untuk sending bulk sms ortu,
+                akan melihat
+                nomor telpon
+                pada entitas ortu/wali <br>dengan priority urutan dimulai dari ayah kandung, ibu kandung kemudian yang
+                dijadikan
+                sebagai wali (jika tidak ada ayah &amp; ibu kandung). </small>
+              <div class="form-group row mt-2">
+                <lagend for="phone1" class="col-sm-2 col-form-label">No. Telepon 1</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input type="text" id="phone2" placeholder="+62xxxxxxxxxx"
+                        class="form-control form-control-sm"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="phone2" class="col-sm-2 col-form-label">No. Telepon 2</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input type="text" id="phone2" placeholder="+62xxxxxxxxxx"
+                        class="form-control form-control-sm"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="email" class="col-sm-2 col-form-label">E-Mail</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><input name="email" type="text" id="email" placeholder="Email"
+                        class="form-control form-control-sm" aria-required="false" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="pekerjaan" class="col-sm-2 col-form-label">Pekerjaan</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><select name="Pekerjaan" id="pekerjaan" class="form-control form-control-sm"
+                        aria-required="false" aria-invalid="false">
+                        <option value="">Pilih Pekerjaan</option>
+                        <option value="1">Pejabat Eksekutif/Pemerintah</option>
+                        <option value="2">Pejabat Legislatif (DPR/DPD/DPRD)</option>
+                        <option value="3">Hakim/Jaksa/Pengacara</option>
+                        <option value="4">TNI</option>
+                        <option value="5">POLRI</option>
+                        <option value="6">Pegawai Negeri Sipil (PNS)</option>
+                        <option value="7">Dosen/Guru</option>
+                        <option value="8">Dokter</option>
+                        <option value="9">Perawat/Bidan</option>
+                        <option value="10">Nelayan/Perikanan</option>
+                        <option value="11">Petani/Pekebun</option>
+                        <option value="12">Peternak</option>
+                        <option value="13">Pedagang</option>
+                        <option value="14">Pengrajin/Pemahat</option>
+                        <option value="15">Arsitek</option>
+                        <option value="16">Konstruksi</option>
+                        <option value="17">Transportasi</option>
+                        <option value="18">Montir/Mekanik </option>
+                        <option value="19">Pertambangan</option>
+                        <option value="20">Karyawan Pabrik</option>
+                        <option value="21">Perkapalan</option>
+                        <option value="22">Perhotelan</option>
+                        <option value="23">Periklanan/Pemasaran</option>
+                        <option value="24">Penulis</option>
+                        <option value="25">Wartawan/Jurnalis</option>
+                        <option value="26">Seniman</option>
+                        <option value="27">Fotografer </option>
+                        <option value="28">Desain Grafis</option>
+                        <option value="29">Programmer</option>
+                        <option value="30">Akuntan</option>
+                        <option value="31">Musikus</option>
+                        <option value="32">Aktor/Aktris</option>
+                        <option value="33">Pilot</option>
+                        <option value="34">Pramugari/Pramugara</option>
+                        <option value="35">Atlet</option>
+                        <option value="36">Pekerjaan Tidak Tetap</option>
+                        <option value="37">Wiraswasta</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="penghasilan" class="col-sm-2 col-form-label">Penghasilan</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-4"><select name="penghasilan" id="penghasilan"
+                        class="form-control form-control-sm" aria-required="false" aria-invalid="false">
+                        <option value="">Pilih Penghasilan</option>
+                        <option value="1">≤ 500</option>
+                        <option value="2">500.000 - 1.500.000</option>
+                        <option value="3">1.500.000 - 2.500.000</option>
+                        <option value="4">2.500.000 - 3.500.000</option>
+                        <option value="5">3.500.000 - 5.000.000</option>
+                        <option value="6">5.000.000 - 10.000.000</option>
+                        <option value="7">&gt; 10.000.000</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group row">
+                <lagend for="negara" class="col-sm-2 col-form-label">Negara *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto"><select name="negara" id="negara" class="form-control form-control-sm"
+                        aria-required="true" aria-invalid="false">
+                        <option value="">Pilih Negara</option>
+                        <option value="1">Indonesia</option>
+                        <option value="2">Singapore</option>
+                        <option value="3">Malaysia</option>
+                        <option value="4">Thailand</option>
+                        <option value="5">Brunei Darussalam</option>
+                        <option value="6">Timor Leste</option>
+                        <option value="7">China</option>
+                        <option value="8">Taiwan</option>
+                        <option value="9">Japan</option>
+                        <option value="10">Cambodia</option>
+                        <option value="11">Vietnam</option>
+                        <option value="12">Myanmar</option>
+                        <option value="13">Philippines</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="provinsi" class="col-sm-2 col-form-label">Provinsi *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto"><select name="provinsi" id="provinsi" class="form-control form-control-sm"
+                        aria-required="true" aria-invalid="false">
+                        <option value="">Pilih Provinsi</option>
+                      </select></div>
+                    <div class="invalid-feedback" style="display: none;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="kabupaten" class="col-sm-2 col-form-label">Kabupaten *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto"><select name="kabupaten" id="kabupaten" class="form-control form-control-sm"
+                        aria-required="true" aria-invalid="false">
+                        <option value="">Pilih Kabupaten</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="kecamatan" class="col-sm-2 col-form-label">Kecamatan *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto"><select name="kecamatan" id="kecamatan" class="form-control form-control-sm"
+                        aria-required="false" aria-invalid="false">
+                        <option value="">Pilih Kecamatan</option>
+                      </select>
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr>
+              <div class="form-group row">
+                <lagend for="jalan" class="col-sm-2 col-form-label">Jalan *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-md-6"><input name="jalan" type="text" id="jalan"
+                        placeholder="Jalan atau Detail Alamat" class="form-control form-control-sm" aria-required="true"
+                        aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group row">
+                <lagend for="kodepos" class="col-sm-2 col-form-label">Kode POS *</lagend>
+                <div class="col-sm-10">
+                  <div class="form-row align-items-center">
+                    <div class="col-auto"><input name="kode pos" type="text" id="kodepos" placeholder="Kode Pos"
+                        class="form-control form-control-sm" aria-required="true" aria-invalid="false">
+                      <div class="invalid-feedback" style="display: none;"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="row">
+                  <legend class="col-form-label col-sm-2 pt-0">Wafat *</legend>
+                  <div class="col-sm-10">
+                    <div class="form-check form-check-inline"><input name="wafat" type="radio" id="tidak" value="T"
+                        class="form-check-input" aria-required="true" aria-invalid="false"><label for="tidak"
+                        class="form-check-label"> Tidak </label></div>
+                    <div class="form-check form-check-inline"><input name="wafat" type="radio" id="ya" value="Y"
+                        class="form-check-input" aria-required="true" aria-invalid="false"><label for="ya"
+                        class="form-check-label">
+                        Ya </label></div>
+                    <div class="invalid-feedback" style="display: none;"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="mb-3 text-right">
+              </div>
+            </form>
+          </div>
+          <div class="card-footer card-green card-outline">
+            <a href="#" class="btn btn-primary">Simpan</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+{% endblock %}
+
+{% block breadcrumeb %}
+<div class="content-header">
+  <div class="container-fluid">
+    <div class="row mb-2">
+      <div class="col-sm-6">
+        <h1 class="m-0"></h1>
+      </div><!-- /.col -->
+      <div class="col-sm-6">
+        <ol class="breadcrumb float-sm-right">
+          <li class="breadcrumb-item active">{{ bc_title }}</li>
+          <!-- <li class="breadcrumb-item"><a href="/Formulir">Formulir</a></li>
+                <li class="breadcrumb-item active">Form Formulir</li> -->
+        </ol>
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </div><!-- /.container-fluid -->
+</div>
+{% endblock breadcrumeb %}
