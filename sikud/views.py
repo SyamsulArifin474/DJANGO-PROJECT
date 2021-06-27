@@ -1,5 +1,8 @@
+from django import forms
 from django.shortcuts import render
 from django.http import HttpResponse
+from sikud.models import Formulir
+from sikud.forms import FormFormulir
 # Create your views here.
 
 
@@ -20,10 +23,28 @@ def index(request):
     return render(request, 'dashboard.html', context)
 
 
-def formulir(request):
+"""<!---------------------------------------- DATA POKOK ----------------------------------------->"""
+
+
+def Tambahformulir(request):
+    form = FormFormulir()
+
     context = {
+        'form': form,
         'title': 'Formulir | SIAKUD',
-        'bc_title': 'Formulir',
+        'bc_title': 'Form Formulir',
+
+    }
+    return render(request, 'FormFormulir.html', context)
+
+
+def formulir(request):
+    FormFormulir = Formulir.objects.all()
+
+    context = {
+        'FormFormulir': FormFormulir,
+        'title': 'Formulir | SIAKUD',
+        'bc_title': 'Detail Formulir',
 
     }
     return render(request, 'formulir.html', context)

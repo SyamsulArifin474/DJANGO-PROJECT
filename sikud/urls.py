@@ -1,11 +1,13 @@
 from django.urls import path
 from . import views
+# from sikud.views import FormFormulir
 
 urlpatterns = [
 
     path('Formulir/', views.formulir, name='formulir'),
     path('Dashboard/', views.index, name='dashboard'),
     path('Formulir/', views.formulir, name='formulir'),
+    path('FormFormulir/', views.Tambahformulir, name='formformulir'),
     # """<!---------------------------------------- DATA POKOK ----------------------------------------->"""
     path('Biodata/', views.biodata, name='biodata'),
     path('DataPokok/Unit/', views.data_unit, name='unit'),

@@ -4,5 +4,5 @@ from sikud.models import Formulir
 
 class FormFormulir(ModelForm):
     class meta:
-        'model' = Formulir,
-        'field' = '__All__',
+        model = Formulir
+        fields = ['nama_lengkap']  # '__All__'

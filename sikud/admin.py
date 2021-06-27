@@ -1,7 +1,8 @@
 from django.contrib import admin
 
 from import_export.admin import ImportExportModelAdmin
-from sikud.models import Provinsi, Kabupaten, Kecamatan, Desa
+
+from sikud.models import *  # Provinsi, Kabupaten, Kecamatan, Desa
 
 
 @admin.register(Provinsi)
@@ -28,3 +29,7 @@ class DesaAdmin(ImportExportModelAdmin):
     pass
 
 # Register your models here.
+
+
+admin.site.register(JenjangPendidikan)
+admin.site.register(Formulir)
