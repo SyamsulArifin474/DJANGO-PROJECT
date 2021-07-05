@@ -1,5 +1,5 @@
 from django.db import models
-from django.utils.translation import deactivate
+# from django.utils.translation import deactivate
 
 # Create your models here.
 
@@ -70,11 +70,8 @@ class Formulir(models.Model):
     phone2 = models.CharField(max_length=20)
     email = models.EmailField(max_length=50)
     provinsi = models.ForeignKey(Provinsi, on_delete=models.CASCADE, null=True)
-    prov_id = provinsi
-    kabupaten = models.ForeignKey(
-        Kabupaten, f, on_delete=models.CASCADE, null=True)
-    kecamatan = models.ForeignKey(
-        Kecamatan, on_delete=models.CASCADE, null=True)
+    kabupaten = models.ForeignKey(Kabupaten, on_delete=models.CASCADE, null=True)
+    kecamatan = models.ForeignKey(Kecamatan, on_delete=models.CASCADE, null=True)
     desa = models.ForeignKey(Desa, on_delete=models.CASCADE, null=True)
     mati = ("T", "TIDAK"), ("Y", "IYA")
     wafat = models.CharField(max_length=20, choices=mati, default='T')

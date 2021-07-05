@@ -1,10 +1,13 @@
 from django.urls import path
+from  django.contrib.auth.views import LoginView
 from . import views
 # from sikud.views import FormFormulir
 
 urlpatterns = [
 
-    path('Formulir/', views.formulir, name='formulir'),
+    # """<!---------------------------------------- LOGIN ----------------------------------------->"""
+    path('login/',LoginView.as_view(), name='login'),
+
     path('Dashboard/', views.index, name='dashboard'),
     path('Formulir/', views.formulir, name='formulir'),
     path('FormFormulir/', views.Tambahformulir, name='formformulir'),

@@ -1,7 +1,7 @@
 from django import forms
 from django.shortcuts import render
 from django.http import HttpResponse
-from sikud.models import Formulir
+from sikud.models import Desa, Formulir, Kabupaten, Kecamatan, Provinsi
 from sikud.forms import FormFormulir
 # Create your views here.
 
@@ -40,14 +40,22 @@ def Tambahformulir(request):
 
 def formulir(request):
     FormFormulir = Formulir.objects.all()
+    Prov = Provinsi.objects.all()
+    Kab = Kabupaten.objects.filter(provinsi_id__startswith='')
+    Kec = Kecamatan.objects.filter(kabupaten_id__startswith='')
+    Des = Desa.objects.filter(desa_id__startswith='')
 
     context = {
         'FormFormulir': FormFormulir,
+        'prov': Prov,
+        'kab': Kab,
+        'kec': Kec,
+        'des': Des, 
         'title': 'Formulir | SIAKUD',
         'bc_title': 'Detail Formulir',
 
     }
-    return render(request, 'formulir.html', context)
+    return render(request, 'formulir2.html', context)
 
 
 """<!---------------------------------------- DATA POKOK ----------------------------------------->"""
