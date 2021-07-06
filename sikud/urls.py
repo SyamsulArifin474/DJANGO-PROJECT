@@ -1,13 +1,14 @@
 from django.urls import path
-from  django.contrib.auth.views import LoginView
+from django.contrib.auth.views import LoginView
 from . import views
 # from sikud.views import FormFormulir
 
 urlpatterns = [
 
     # """<!---------------------------------------- LOGIN ----------------------------------------->"""
-    path('login/',LoginView.as_view(), name='login'),
-
+    # path('login/',LoginView.as_view(), name='login'),
+    path('login/', views.loginView, name='login'),
+    path('logout/', views.logoutView, name='logout'),
     path('Dashboard/', views.index, name='dashboard'),
     path('Formulir/', views.formulir, name='formulir'),
     path('FormFormulir/', views.Tambahformulir, name='formformulir'),
